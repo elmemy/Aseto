@@ -1,45 +1,45 @@
-import 'package:aseto/features/account/presentation/create_account_screen.dart' show CreateAccountScreen;
+import 'package:aseto/features/account/presentation/create_account_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   testWidgets('CreateAccountScreen submits successfully with valid input', (WidgetTester tester) async {
-    // Build the widget tree
+    // Fix 1: Wrap in ProviderScope
     await tester.pumpWidget(
-      const MaterialApp(
-        home: CreateAccountScreen(),
+      const ProviderScope(
+        child: MaterialApp(
+          home: CreateAccountScreen(),
+        ),
       ),
     );
 
-    // Wait for animations or initial build
     await tester.pumpAndSettle();
 
-    // Find all text fields (7 fields: full name, dob, email, phone, password, confirm password)
-    final textFields = find.byType(TextFormField);
+    // Fix 2: Set large screen size to avoid scroll issues
+    await tester.binding.setSurfaceSize(const Size(1200, 2000));
+    await tester.pump();
 
-    // Fill all required fields
-    await tester.enterText(textFields.at(0), 'Ahmed Elmemy'); // Full Name
-    await tester.enterText(textFields.at(1), '21-01-1994');   // DOB
-    await tester.enterText(textFields.at(2), 'ahmed@gmail.com'); // Email
-    await tester.enterText(textFields.at(3), '01012345678'); // Phone
-    await tester.enterText(textFields.at(4), 'password123'); // Password
-    await tester.enterText(textFields.at(5), 'password123'); // Confirm Password
+    // Enter data
+    await tester.enterText(find.widgetWithText(TextFormField, 'Full Name'), 'Ahmed Elmemy');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Date of birth (MM-DD-YYYY)'), '01-01-1990');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Email'), 'ahmedelmemy@icloud.com');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Phone'), '01012345678');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Password'), 'Password123');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Confirm Password'), 'Password123');
 
     // Tap submit button
     final continueButton = find.text('Continue');
-    expect(continueButton, findsOneWidget);
+    await tester.ensureVisible(continueButton);
     await tester.tap(continueButton);
 
-    // Begin loading
-    await tester.pump(); // shows CircularProgressIndicator
+    await tester.pump(); // shows loader
+    await tester.pump(const Duration(seconds: 2)); // wait for fake async
 
-    // Wait for async delay (2 seconds)
-    await tester.pump(const Duration(seconds: 2));
-
-    // Should no longer show loading spinner
+    // Assert no loader
     expect(find.byType(CircularProgressIndicator), findsNothing);
 
-    // Button should return to original state
+    // Button should still be visible
     expect(continueButton, findsOneWidget);
   });
 }
