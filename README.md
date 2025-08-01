@@ -1,16 +1,64 @@
-# asseto
+# 👤 Create Account Feature – Aseto App
 
-A new Flutter project.
+## 📌 Overview
 
-## Getting Started
+This feature implements a **Create Account screen** using **Flutter** and **Riverpod**, following clean architecture, modular design, and best practices. The form includes full validation, reusable UI components, centralized theming, and test coverage.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✅ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🎨 UI & Theming
+- Fully styled using `AppColors`, `AppFonts`, and `AppTextStyles`
+- Responsive layout with consistent spacing and mobile-friendly behavior
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📋 Form Fields
+- Full Name  
+- Date of Birth (calendar picker)  
+- Email  
+- Phone Number  
+- Password  
+- Confirm Password  
+
+All fields use reusable widgets (`CustomTextField`, `PasswordField`) with focus-aware styling.
+
+### 🛡️ Validation Rules
+- Required field check
+- Email format via RegExp
+- Password must:
+  - Be at least 8 characters
+  - Include one uppercase letter
+- Confirm password must match
+
+### ⚙️ Architecture
+- **Riverpod Notifier** for managing form state and input controllers
+- Business logic moved to `CreateAccountService`
+- Loading state handled via `isLoading` flag
+- Snackbars shown on success and error
+
+### 🧪 Test Coverage
+- Widget test included to:
+  - Fill in all fields with valid data
+  - Submit the form
+  - Wait for async loading
+  - Verify that validation and success flow works
+
+---
+
+## 🗂️ Folder Structure
+
+```txt
+lib/
+├── core/
+│   ├── localization/      → Static text strings
+│   ├── theme/             → Colors, fonts, text styles
+│   ├── utils/             → Helpers for date pickers, validation, decoration
+│   └── widgets/           → Reusable UI components like text/password fields
+├── features/
+│   └── account/
+│       ├── controller/    → Form logic (Riverpod)
+│       ├── presentation/
+│       │   ├── create_account_screen.dart
+│       │   └── widgets/   → Form, headers, DOB field, submit button, login text
+│       └── service/       → Handles submission and snackbar logic
+└── main.dart              → App entry point
