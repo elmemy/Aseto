@@ -1,0 +1,62 @@
+name: aseto
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.7
+  intl: ^0.20.2
+  flutter_riverpod: ^2.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_gen_runner: ^5.4.0
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: HelveticaNeue
+      fonts:
+        - asset: assets/fonts/helvetica/HelveticaNeueBlack.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueBlackItalic.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueBold.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueBoldItalic.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueLight.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueLightItalic.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueMedium.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueMediumItalic.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueHeavy.otf
+        - asset: assets/fonts/helvetica/HelveticaNeueHeavyItalic.otf
+
+    - family: Parabolica
+      fonts:
+        - asset: assets/fonts/parabolica/Parabolica-Regular.otf
+        - asset: assets/fonts/parabolica/Parabolica-Bold.otf
+        - asset: assets/fonts/parabolica/Parabolica-Black.otf
+        - asset: assets/fonts/parabolica/Parabolica-Medium.otf
+        - asset: assets/fonts/parabolica/Parabolica-Hairline.otf
+        - asset: assets/fonts/parabolica/Parabolica-RegularOblique.otf
+        - asset: assets/fonts/parabolica/Parabolica-BoldOblique.otf
+        - asset: assets/fonts/parabolica/Parabolica-BlackOblique.otf
+        - asset: assets/fonts/parabolica/Parabolica-MediumOblique.otf
+        - asset: assets/fonts/parabolica/Parabolica-HairlineOblique.otf
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
+  integrations:
+    flutter_svg: true
