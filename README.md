@@ -37,11 +37,17 @@ All fields use reusable widgets (`CustomTextField`, `PasswordField`) with focus-
 - Snackbars shown on success and error
 
 ### 🧪 Test Coverage
-- Widget test included to:
-  - Fill in all fields with valid data
-  - Submit the form
-  - Wait for async loading
-  - Verify that validation and success flow works
+
+- ✅ **UI integration test** created to validate the entire Create Account screen flow.
+- Covers:
+  - Filling all form fields with valid input
+  - Tapping the continue button
+  - Showing the loading indicator
+  - Completing simulated async delay
+  - Verifying successful submission
+- Ensures validation rules and success behavior are functioning as expected.
+
+> This UI test was written manually to ensure the user experience is fully testable and behaves reliably across input and state changes.
 
 ---
 
