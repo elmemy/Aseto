@@ -1,7 +1,8 @@
+import 'package:aseto/core/theme/app_colors.dart';
+import 'package:aseto/core/theme/app_text_styles.dart';
 import 'package:aseto/core/utils/decoration_helper.dart';
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../theme/app_text_styles.dart';
+
 
 class CustomTextField extends StatefulWidget {
   final String labelText;

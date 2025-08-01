@@ -57,7 +57,7 @@ All fields use reusable widgets (`CustomTextField`, `PasswordField`) with focus-
 lib/
 ├── core/
 │   ├── localization/              → Static text strings (account_localization.dart)
-│   ├── theme/                     → Theme setup: colors, fonts, text styles
+│   ├── theme/                     → Theme setup: colors, text styles
 │   ├── utils/                     → Helpers (validation, date picker, decoration)
 │   └── widgets/                   → Shared widgets (CustomTextField, PasswordField)
 

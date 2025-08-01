@@ -1,7 +1,7 @@
 import 'package:aseto/core/localization/account_localization.dart';
 import 'package:aseto/core/theme/app_colors.dart';
 import 'package:aseto/core/theme/app_text_styles.dart';
-import 'package:aseto/generation/assets.gen.dart';
+import 'package:aseto/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'custom_text_field.dart';

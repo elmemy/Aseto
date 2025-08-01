@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           onSurface: AppColors.textPrimary,
           onError: AppColors.white,
         ),
-        textTheme: const TextTheme(
+        textTheme: TextTheme(
           headlineLarge: AppTextStyles.headlineLarge,
           headlineMedium: AppTextStyles.headlineMedium,
           titleLarge: AppTextStyles.titleLarge,

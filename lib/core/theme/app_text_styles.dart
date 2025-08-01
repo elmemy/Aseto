@@ -1,17 +1,17 @@
+import 'package:aseto/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
-import 'app_fonts.dart';
 
 class AppTextStyles {
   static const TextStyle headlineLarge = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 32,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
   );
 
-  static const TextStyle headlineMedium = TextStyle(
-    fontFamily: AppFonts.parabolic,
+  static final TextStyle headlineMedium = TextStyle(
+    fontFamily: FontFamily.parabolica,
     fontSize: 32,
     fontWeight: FontWeight.w500,
     height: 1.0,
@@ -20,7 +20,7 @@ class AppTextStyles {
   );
 
   static const TextStyle subtitleRegular = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontWeight: FontWeight.w400,
     fontSize: 18,
     height: 28 / 18,
@@ -30,7 +30,7 @@ class AppTextStyles {
 
 
   static const TextStyle subtitleTextRegular = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontWeight: FontWeight.w400,
     fontSize: 18,
     height: 28 / 18,
@@ -39,14 +39,14 @@ class AppTextStyles {
   );
 
   static const TextStyle titleLarge = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 20,
     fontWeight: FontWeight.w600,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle buttonText = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontSize: 18,
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal,
@@ -57,7 +57,7 @@ class AppTextStyles {
   );
 
   static const TextStyle alreadyHaveAccountText = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontSize: 16,
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
@@ -69,7 +69,7 @@ class AppTextStyles {
 
 
   static const TextStyle loginLinkText = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontSize: 16,
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal,
@@ -80,21 +80,21 @@ class AppTextStyles {
   );
 
   static const TextStyle bodyLarge = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 16,
     fontWeight: FontWeight.normal,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle bodyMedium = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 14,
     fontWeight: FontWeight.normal,
     color: AppColors.textSecondary,
   );
 
   static const TextStyle hintTextStyle = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontWeight: FontWeight.w400,
     fontSize: 18,
     height: 1.0,
@@ -103,7 +103,7 @@ class AppTextStyles {
   );
 
   static const TextStyle requiredLabelStyle = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 12,
@@ -113,7 +113,7 @@ class AppTextStyles {
   );
 
   static const TextStyle labelRegular = TextStyle(
-    fontFamily: AppFonts.helveticaNeu,
+    fontFamily: FontFamily.helveticaNeue,
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 18,
@@ -124,14 +124,14 @@ class AppTextStyles {
 
 
   static const TextStyle labelLarge = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: AppColors.primary,
   );
 
   static const TextStyle errorText = TextStyle(
-    fontFamily: AppFonts.parabolic,
+    fontFamily: FontFamily.parabolica,
     fontSize: 12,
     color: AppColors.error,
   );

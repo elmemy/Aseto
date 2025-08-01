@@ -1,4 +1,4 @@
-import 'package:aseto/core/theme/app_fonts.dart';
+import 'package:aseto/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -11,7 +11,7 @@ class DatePickerHelper {
     DateTime? firstDate,
     DateTime? lastDate,
     Locale? locale,
-    String fontFamily = AppFonts.parabolic,
+    String fontFamily = FontFamily.parabolica,
   }) async {
     final DateTime now = DateTime.now();
     final DateTime? picked = await showDatePicker(

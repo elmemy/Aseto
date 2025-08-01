@@ -13,4 +13,7 @@ class FontFamily {
 
   /// Font family: HelveticaNeue
   static const String helveticaNeue = 'HelveticaNeue';
+
+  /// Font family: Parabolica
+  static const String parabolica = 'Parabolica';
 }
