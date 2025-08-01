@@ -56,15 +56,22 @@ All fields use reusable widgets (`CustomTextField`, `PasswordField`) with focus-
 ```txt
 lib/
 ├── core/
-│   ├── localization/      → Static text strings
-│   ├── theme/             → Colors, fonts, text styles
-│   ├── utils/             → Helpers for date pickers, validation, decoration
-│   └── widgets/           → Reusable UI components like text/password fields
+│   ├── localization/              → Static text strings (account_localization.dart)
+│   ├── theme/                     → Theme setup: colors, fonts, text styles
+│   ├── utils/                     → Helpers (validation, date picker, decoration)
+│   └── widgets/                   → Shared widgets (CustomTextField, PasswordField)
+
 ├── features/
 │   └── account/
-│       ├── controller/    → Form logic (Riverpod)
+│       ├── controller/            → Riverpod state (create_account_controller.dart)
 │       ├── presentation/
 │       │   ├── create_account_screen.dart
-│       │   └── widgets/   → Form, headers, DOB field, submit button, login text
-│       └── service/       → Handles submission and snackbar logic
-└── main.dart              → App entry point
+│       │   └── widgets/           → Form, DOB field, section headers, login text, submit button
+│       └── service/               → Form submission logic (create_account_service.dart)
+
+├── generation/                    → Auto-generated assets/fonts
+└── main.dart                      → App entry point
+
+test/
+├── create_account_screen_test.dart  → ✅ UI integration test
+├── widget_test.dart                → Flutter boilerplate widget test
